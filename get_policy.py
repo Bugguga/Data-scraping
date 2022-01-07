@@ -30,7 +30,7 @@ def visible(element):
 num_cores = multiprocessing.cpu_count()
 print(num_cores)
 apk_pp = pd.read_csv(
-    r'C:\Users\nat14\OneDrive\เอกสาร\indiv\AllLink.csv')
+    r'path_to_AllLink.csv')
 n = len(apk_pp)
 print(n+1)
 core = 0
@@ -47,7 +47,7 @@ def process(arg):
     df_privacy = []
     apk_name = []
     category = []
-    with open(r'C:\Users\nat14\OneDrive\เอกสาร\indiv\AllLink.csv', 'r', encoding="utf8") as csvfile:
+    with open(r'path_to_AllLink.csv', 'r', encoding="utf8") as csvfile:
 
         apk_pp = csv.reader(csvfile)
         user_agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64)'
