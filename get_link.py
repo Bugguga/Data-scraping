@@ -12,10 +12,10 @@ import csv
 page = 1
 api_url = 'https://data.42matters.com/api/v3.0/android/apps/top_google_charts.json'
 category_list = pd.read_json(
-    r"C:\Users\nat14\OneDrive\เอกสาร\indiv\top_chart_categories.json", encoding="utf8")
-access_token = '877fcf8e96ea55e04a5b40e5c27d512ba3dd0a8f'
+    r"path_to_top_chart_categories.json", encoding="utf8")
+access_token = 'XXXXXXXXXXXXXXXXXXXXXXXXXXX'
 country = "TH"
-date = '30-12-2021'
+date = 'DD-MM-YYYY'
 dic = []
 
 
@@ -54,7 +54,7 @@ def getAllLink(cat_keys, date):
     for c in cat_keys['categories']:
         page = 1
         createCSV(c['cat_key'], country, access_token, date, page)
-    file_path = r'C:\Users\nat14\OneDrive\เอกสาร\indiv\AllLink.csv'
+    file_path = r'path_to_save_the_file/AllLink.csv'
     with open(file_path, 'w', newline='', encoding='utf-8') as fp:
         header = ['apk_name', 'category', 'privacy']
         writer = csv.writer(fp, delimiter=",")
