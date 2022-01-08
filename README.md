@@ -1,5 +1,5 @@
 # Data-scraping
-Indiv 2564
+
 
 Firstly , go to get_link.py and you need to complete the following red boxes 
 
